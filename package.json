@@ -9,7 +9,8 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "ide-helper-facades": "php artisan clear-compiled && php artisan ide-helper:generate",
-        "ide-helper-models": "php artisan ide-helper:models -N"
+        "ide-helper-models": "php artisan ide-helper:models -N",
+        "migrate fresh": "php artisan migrate:fresh"
     },
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
