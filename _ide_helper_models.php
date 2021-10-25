@@ -18,6 +18,8 @@ namespace App{
  * @property string $name
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Record[] $records
+ * @property-read int|null $records_count
  * @method static \Illuminate\Database\Eloquent\Builder|Genre newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Genre newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Genre query()
@@ -38,6 +40,9 @@ namespace App{
  * @property float $total_price
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Orderline[] $orderlines
+ * @property-read int|null $orderlines_count
+ * @property-read \App\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|Order newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Order newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Order query()
@@ -63,6 +68,7 @@ namespace App{
  * @property int $quantity
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Order $order
  * @method static \Illuminate\Database\Eloquent\Builder|Orderline newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Orderline newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Orderline query()
@@ -93,6 +99,7 @@ namespace App{
  * @property int $stock
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Genre $genre
  * @method static \Illuminate\Database\Eloquent\Builder|Record newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Record newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Record query()
@@ -126,6 +133,8 @@ namespace App{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Order[] $orders
+ * @property-read int|null $orders_count
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
