@@ -10948,3 +10948,16 @@ main {
   min-height: 500px;
 }
 
+.cardShopMaster {
+  cursor: pointer;
+}
+
+.cardShopMaster .btn {
+  display: none;
+}
+
+a.btn.disabled {
+  cursor: not-allowed;
+  pointer-events: all;
+}
+

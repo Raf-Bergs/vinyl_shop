@@ -44,3 +44,5 @@ Route::prefix('api')->group(function(){
     });
 });
 
+Route::view('itunes','itunes');
+
