@@ -17,4 +17,8 @@ VinylShop.hello();
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
+$('[required]').each(function () {
+    $(this).closest('.form-group')
+        .find('label')
+        .append('<sup class="text-danger mx-1">*</sup>');
+});
