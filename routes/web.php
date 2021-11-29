@@ -28,8 +28,9 @@ Route::get('contact-us','ContactUsController@show');
 Route::post('contact-us','ContactUsController@sendEmail');
 
 // New version with prefix and group
-Route::prefix('admin')->group(function () {
+Route::middleware(['auth','admin'])->prefix('admin')->group(function () {
     Route::redirect('/', '/admin/records');
+    Route::resource('genres', 'Admin\GenreController');
     Route::get('records', 'Admin\RecordController@index');
 });
 
@@ -47,3 +48,7 @@ Route::prefix('api')->group(function(){
 
 Route::view('itunes','itunes');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
