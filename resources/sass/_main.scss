@@ -13,3 +13,6 @@ a.btn.disabled{
     cursor: not-allowed;
     pointer-events: all;
 }
+.btn[disabled] {
+    cursor: not-allowed;
+}

@@ -39,6 +39,9 @@ class CreateGenresTable extends Migration
                 ['name' => 'folk',          'created_at' => now()],
                 ['name' => 'hip hop',       'created_at' => now()],
                 ['name' => 'soul',          'created_at' => now()],
+                ['name' => '_genre1',          'created_at' => now()],
+                ['name' => '_genre2',          'created_at' => now()],
+                ['name' => '_genre3',          'created_at' => now()],
             ]
         );
     }
